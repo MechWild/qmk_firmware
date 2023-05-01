@@ -33,8 +33,6 @@ uint32_t anim_sleep = 0;
 uint8_t current_idle_frame = 0;
 uint8_t current_tap_frame = 0;
 
-
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_all(
                                                                                                                   KC_MUTE,
@@ -75,10 +73,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #endif
 
 #ifdef OLED_ENABLE
-oled_rotation_t oled_init_user(oled_rotation_t rotation) {
-    return OLED_ROTATION_180;  // flips the display 180 degrees
-}
-
 static void render_anim(void) {
 
     // Idle animation

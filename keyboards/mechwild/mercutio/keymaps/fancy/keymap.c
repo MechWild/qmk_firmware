@@ -47,8 +47,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   	KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS,          KC_TRNS,          KC_TRNS, KC_TRNS,          KC_TRNS )
 };
 
+uint8_t selected_layer = 0;
+
 #ifdef ENCODER_ENABLE       // Encoder Functionality
-    uint8_t selected_layer = 0;
+#ifndef ENCODER_MAP_ENABLE  // If encoder mapping is enabled, ignore the fancy layer locking stuff
     bool encoder_update_user(uint8_t index, bool clockwise) {
         #ifdef OLED_ENABLE
             oled_clear();
@@ -74,13 +76,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         }
     return false;
     }
+#else
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
+    [0] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [1] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [2] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [3] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+};
+#endif
 #endif
 
 #ifdef OLED_ENABLE   // OLED Functionality
-    oled_rotation_t oled_init_user(oled_rotation_t rotation) {
-        return OLED_ROTATION_180;       // flips the display 180 degrees if offhand
-    }
-
     bool clear_screen = false;          // used to manage singular screen clears to prevent display glitch
     static void render_name(void) {     // Render Mercutio Script Text
         static const char PROGMEM mercutio_name[] = {
