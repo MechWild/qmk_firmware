@@ -1,7 +1,7 @@
 // Copyright 2023 Kyle McCreery (@kylemccreery)
 // SPDX-License-Identifier: GPL-2.0-or-later
 
- #include QMK_KEYBOARD_H
+#include QMK_KEYBOARD_H
 
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
