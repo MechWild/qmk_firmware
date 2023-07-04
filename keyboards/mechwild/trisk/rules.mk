@@ -1,1 +1,3 @@
-RGB_MATRIX_DRIVER = WS2812
+# Build Options
+#   change yes to no to disable
+#

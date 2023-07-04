@@ -3,12 +3,9 @@
 
 #pragma once
 
-#define RGB_DI_PIN D1
+/* RGB settings, uncomment this define to enable RGB */
+#define WS2812_DI_PIN D1
+#define RGB_MATRIX_LED_COUNT  17
 
-#ifdef RGB_MATRIX_ENABLE
-#define RGB_MATRIX_KEYRELEASES
-#define ENABLE_RGB_MATRIX_CYCLE_PINWHEEL
-#define ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
-#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_SOLID_REACTIVE_SIMPLE	
-#define RGB_MATRIX_LED_COUNT 17
-#endif
+/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
+#define DEBOUNCE 5
