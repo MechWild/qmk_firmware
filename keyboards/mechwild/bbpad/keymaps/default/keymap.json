@@ -2,7 +2,7 @@
     "keyboard": "mechwild/bbpad",
     "keymap": "default",
     "version": 1,
-    "layout": "LAYOUT",
+    "layout": "LAYOUT_vert",
     "layers": [
         [
                                        "KC_MUTE",
