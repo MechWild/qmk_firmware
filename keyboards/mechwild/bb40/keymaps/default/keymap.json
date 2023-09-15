@@ -2,7 +2,7 @@
    "keyboard": "mechwild/bb40",
    "keymap": "default",
    "version": 1,
-   "layout": "LAYOUT",
+   "layout": "LAYOUT_all",
    "layers": [
       [
          "KC_ESC",             "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",    "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_BSPC",
