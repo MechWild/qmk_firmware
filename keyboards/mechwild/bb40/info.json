@@ -5,7 +5,7 @@
     "diode_direction": "COL2ROW",
     "encoder": {
         "rotary": [
-            {"pin_a": "B3", "pin_b": "B4"}
+            {"pin_a": "B4", "pin_b": "B3"}
         ]
     },
     "features": {
